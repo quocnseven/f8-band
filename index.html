@@ -62,19 +62,19 @@
                 <!-- member list -->
                 <div class="row member-list">
                     <!-- member 1 -->
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/imgmember.jpg" class="member-img">
+                        <img src="./assets/img/imgmember.jpg" class="member-img">
                     </div>
                     <!-- member 2 -->
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/imgmember.jpg" class="member-img">
+                        <img src="./assets/img/imgmember.jpg" class="member-img">
                     </div>
                     <!-- member 3 -->
-                    <div class="col col-third text-center">
+                    <div class="member-item col col-third text-center">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/imgmember.jpg" class="member-img">
+                        <img src="./assets/img/imgmember.jpg" class="member-img">
                     </div>   
                 </div>
 
@@ -92,35 +92,35 @@
                         <li>November <span class="for-sale">3</span></li>
                     </ul>
                     <!-- place -->
-                    <div class="row place-list">
+                    <div class="row place-list p-16 m-mlr-16">
                         <!-- New York -->
-                        <div class="col col-third">
-                            <img src="/assets/img/newyork.jpg" alt="New York" class="place-img">
+                        <div class="col col-third  mt-16 s-col-full">
+                            <img src="./assets/img/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-tickets">Buy Tickets</button>
+                                <button class="s-full-width text-center btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <!-- Paris -->
-                        <div class="col col-third">
-                            <img src="/assets/img/paris.jpg" alt="Paris" class="place-img">
+                        <div class="col col-third  mt-16 s-col-full">
+                            <img src="./assets/img/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-tickets">Buy Tickets</button>
+                                <button class="s-full-width text-center btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <!-- San Francisco -->
-                        <div class="col col-third">
-                            <img src="/assets/img/sanfran.jpg" alt="San Francisco" class="place-img">
+                        <div class="col col-third  mt-16 s-col-full">
+                            <img src="./assets/img/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-tickets">Buy Tickets</button>
+                                <button class="s-full-width text-center btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         
@@ -133,27 +133,27 @@
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-subheading">Fan? Drop a note!</p>
                 <div class="row contact-content contact-info">
-                    <div class="col col-half">
+                    <div class="col s-col-full col-half">
                         <p><i class="ti-location-pin"></i>Chicago - US</p>
-                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col s-col-full col-half contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col s-col-full col-half">
                                     <input type="text" required class="form-control" placeholder="Name">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col s-col-full col-half s-mt-16">
                                     <input type="email" required class="form-control" placeholder="Email">
                                 </div>
                             </div>
-                            <div class="row mt-8">
+                            <div class="row mt-8 s-mt-16">
                                 <div class="col col-full">
                                     <input type="text" required class="form-control" placeholder="Message">
                                 </div>
                             </div>
-                            <input class="btn mt-16 pull-right" type="submit" value="SEND">
+                            <input class="contact-submit-btn btn mt-16 pull-right s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                 <a href=""><i class="ti-twitter"></i></a>
                 <a href=""><i class="ti-linkedin"></i></a>
             </div>
-            <p class="power-right">Powered by <a href="">w3.css</a></p>
+            <p class="power-right">Powered by <a href="">Quoc Nguyen</a></p>
         </div>
     </div>
 
@@ -261,9 +261,14 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
         for (var i=0; i<menuItems.length; i++){
             var menuItem = menuItems[i]
-            console.log(menuItem);
-            menuItem.onclick = function(){
-                header.style.height = null;
+            menuItem.onclick = function(event){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu){
+                    event.preventDefault();
+                }
+                else {
+                    header.style.height = null;
+                }
             }
         }
     </script>

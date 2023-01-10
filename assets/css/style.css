@@ -15,6 +15,8 @@
     margin-top: 15px;
     display: inline-block;
     border: none;
+    appearance: none;
+    -webkit-appearance: none;
 
 }
 
@@ -124,7 +126,6 @@ html{
     left: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav{
@@ -173,7 +174,7 @@ html{
 
 #nav .subnav{
     position: absolute;
-    top: 100%
+    top: 100%;
     left: 0;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -232,7 +233,7 @@ html{
 #slider {
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/slider1.jpg') top center / cover no-repeat;
+    background: url('../img/slider1.jpg') top center / cover no-repeat;
     position: relative;
 }
 
@@ -249,12 +250,14 @@ html{
 #slider .text-heading{
     font-weight:300;
     font-size: 24px;
+    text-shadow: 0 0 1px black;
 }
 
 #slider .text-description{
     font-size: 15px;
     margin-top: 25px;
     font-weight: bold;
+    text-shadow: 0 0 1px black;
 
 }
 
@@ -357,7 +360,7 @@ html{
 /* Places */
 
 .place-list{
-    margin-top: 32px;
+    margin-top: 16px;
     /* padding: 32px; */
 }
 
@@ -499,7 +502,8 @@ html{
 /* contact form */
 #content .contact-content{
     width: 800px;
-    padding: 64px 0;
+    max-width: 100%;
+    padding: 32px 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -511,6 +515,10 @@ html{
 .contact-info{
     font-size: 18px;
     line-height: 1.5;
+}
+
+.contact-info a:hover{
+    opacity: 0.8;
 }
 
 .contact-info i[class*="ti-"]{
@@ -527,6 +535,7 @@ html{
     padding: 10px;
     border: 1px solid #ccc;
     width: 100%;
+    
 }
 
 /* map section */
@@ -585,18 +594,101 @@ html{
 /* Tablet >740px - <1023px */
 /* mobile <740px */
 
+/* mobile & tablet */
+@media (max-width: 63.9375em){
+    .btn{
+        padding: 16px;
 
-@media (min-width: 740px) and (max-width: 1023px){
+    }
 
+    #nav .subnav a{
+        padding: 5px 12px;
+    }
+
+    .contact-form .form-control{
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .contact-info{
+        line-height: 2;
+    }
+
+    #footer .social-list{
+        font-size: 60px;
+    }
+
+    .social-list i{
+        margin: 15px;
+    }
+
+    #footer .power-right a{
+        padding: 16px 0;
+        display: inline-block;
+    }
+
+    .contact-submit-btn{
+        font-size: 18px;
+    }
 }
 
-@media (max-width: 740px){
+
+/* tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    .m-mlr-16{
+        margin: 0 16px !important;
+    }
+    
+}
+
+/* mobile */
+@media (max-width: 46.1875em){
+
+    .p-16{
+        padding: 0 16px !important;
+    }
+
+    .s-col-full{
+        width: 100% !important;
+    }
+
+    .s-full-width{
+        width: 100% !important;
+    }
+
+    .s-mt-16{
+        margin-top: 16px !important;
+    }
+
+    .s-mt-8{
+        margin-top: 8px;
+    }
+
+
+    #header{
+        overflow: hidden;
+    }
+
     #header .menu-btn{
         display: block;
     }
    
     #nav{
         display: block;
+    }
+
+    #nav li a{
+        padding: 1px 24px;
+    }
+
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 40px;
     }
 
     #nav > li:first-child{
@@ -611,5 +703,30 @@ html{
         display: none;
     }
 
+
+    #content .about-text{
+        max-width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    #content .member-item{
+        margin-top:  30px;
+        width: 100%;
+    }
+
+    #content .member-img{
+        width: 60%;
+    }
+
+    
+
+    .contact-form{
+        margin-top: 32px;
+    }
+   
+    #footer .social-list{
+        font-size: 20px;
+    }
     
 }
